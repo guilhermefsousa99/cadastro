@@ -2,6 +2,12 @@
 <html lang="pt">
 
 <head>
+    <style>
+        body {
+                    background-image: url(http://i.imgur.com/oRokM.jpg);
+                    background-position: 1366px 78px;
+                }
+                </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -54,7 +60,7 @@
     function configurarGrafico() {
         var configuracoes = {
             responsive: true,
-            animation: exibiu_grafico ? false : {duration: 1500},
+            animation: exibiu_grafico ? false : { duration: 1500 },
             hoverMode: 'index',
             stacked: false,
             title: {
@@ -124,7 +130,7 @@
 
                     for (i = 0; i < resposta.length; i++) {
                         var registro = resposta[i];
-                    
+
                         // aqui, após 'registro.' use os nomes 
                         // dos atributos que vem no JSON 
                         // que gerou na consulta ao banco de dados
