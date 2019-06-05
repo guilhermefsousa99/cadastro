@@ -7,6 +7,13 @@
                     background-image: url(http://i.imgur.com/oRokM.jpg);
                     background-position: 1366px 78px;
                 }
+                #menu {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  width: 8em;
+  margin-top: -2.5em;
+}
                 </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,9 +28,14 @@
 
 <body onload="atualizarGrafico();">
     <br><br>
-    <div style="margin-left:30%; margin-top:25%">
-        Olá, <b id="b_usuario" style="color:white"></b>
-        <a href="#" onclick="logoff()" style="color:white">[Sair]</a>
+    <ul id=menu>
+        <li><a href="index.html">Cadastro</a>
+        <li><a href="login.html">Login</a>
+        <li> <a href="#" onclick="logoff()" style="color:white">[Sair]</a>
+        </ul>
+    <div style="margin-left:33%; margin-top:16%">
+        <h4 style="color:white">Olá,</h4> <b id="b_usuario" style="color:white"></b>
+      
 
 </body>
 
