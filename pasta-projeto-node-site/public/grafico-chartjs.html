@@ -3,11 +3,12 @@
 
 <head>
     <style>
-        body {
+        body {        transform:translate(-50%,-50%);
                     background-image: url(http://i.imgur.com/oRokM.jpg);
                     background-position: 1366px 78px;
                 }
                 #menu {
+                    transform:translate(-50%,-50%);
   position: fixed;
   right: 0;
   width: 8em;
@@ -27,13 +28,16 @@
 
 <body onload="atualizarGrafico();">
     <br><br>
-    <ul id=menu>
+    <ul id=menu style="transform:translate(-50%,-50%);
+    ">
         <li><a href="index.html">Cadastro</a>
         <li><a href="login.html">Login</a>
         <li> <a href="#" onclick="logoff()" style="color:white">[Sair]</a>
         </ul>
-    <div style="margin-left:33%; margin-top:16%">
-        <h4 style="color:white">Olá,<b id="b_usuario" style="color:white"></b></h4>
+    <div style="margin-left:33%; margin-top:16% ;transform:translate(-50%,-50%);
+    " >
+        <h4 style="color:white;transform:translate(-50%,-50%);
+        ">Olá,<b id="b_usuario" style="color:white"></b></h4>
       </div>
 
 </body>
