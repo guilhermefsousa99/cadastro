@@ -6,3 +6,29 @@ body {
 a {
   color: #00B7FF;
 }
+@media screen and (min-width: 480px){
+  body {
+    background-image: url(http://i.imgur.com/oRokM.jpg);
+    background-position: 1366px 78px;
+    margin-top: 0%;
+    margin-right: 0%;
+    margin-bottom: 0%;
+    margin-left: 0%;
+}
+
+.container {
+    max-width: 100%;
+    background: rgb(182, 174, 174);
+    position: top;
+    padding-bottom: 20px;
+    min-height: 50px;
+}
+
+.formulario {
+    max-width: 500px;
+    margin: 0 auto;
+    position: center;
+    padding-bottom: 20px;
+    min-height: 300px;
+}
+}
