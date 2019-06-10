@@ -11,18 +11,19 @@
         }
 
         .grid-container {
-            display: grid;
-            grid-template-columns: auto auto auto auto;
-            grid-gap: 10px;
-            background-color:azure;
-            padding: 10px;
-        }
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 1px;
+  background-color: black;
+  padding: 1px;
+}
 
-        .grid-container>div {
-            text-align: center;
-            padding: 20px 0;
-            font-size: 30px;
-        }
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,7 +39,7 @@
 <body onload="atualizarGrafico();">
     <div class="grid-container">
         <div><a>Menu</a></div>
-        <div><a href="">Sobre Nós</a></div>
+        <div><a>Sobre Nós</a></div>
         <div><a href="#" onclick="logoff()" style="color:white">[Sair]</a></div>
     </div>
     <br><br>
