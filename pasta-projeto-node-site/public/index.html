@@ -30,7 +30,7 @@
         min-height: 300px;
     }
     .botao2 {
-    margin-left: 30px;
+    margin-left: 0px;
     }
     .botao1:hover{
     color:blue;
@@ -86,12 +86,15 @@
                 window.location.href='login.html';
 
             } else {
-
+                if(login.value|| nome.value||senha.value|| rg.value||telefone.value){
+                alert("Complete os campos!");
+            
                 console.log('Erro de cadastro!');
                 response.text().then(function (resposta) {
                     div_erro.innerHTML = resposta;
                 });
                 finalizar_aguardar();
+                }
             }
         });
 
