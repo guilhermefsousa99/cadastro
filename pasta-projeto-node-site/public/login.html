@@ -41,18 +41,16 @@
 <body>
     <div class="container"></div>
 
-    <div class="formulario" >
+    <div class="formulario">
         <form id="form_login" method="post" onsubmit="return entrar()">
             <h2 style="color:azure; border:4px">Entre Agora hahaha</h2>
-            <h3 style="color:azure; border:4px">Digite seu Usuário:</h3><input type="text" name="login"
-                autofocus><br><br>
-            <h3 style="color:azure; border:4px">Digite sua Senha:</h3><input type="password" name="senha">
+            <h3 style="color:azure; border:4px">Digite seu Usuário:</h3><input type="text" id="lgm" name="login" autofocus><br><br>
+            <h3 style="color:azure; border:4px">Digite sua Senha:</h3><input type="password" id="sna" name="senha">
             <br><br>
             <button class="botao3" id="btn_entrar">Entrar</button>
         </form>
     </div>
-    <img src="aguarde2.gif" id="img_aguarde"
-     style="display: none; margin-top: 0,80%; margin-left:33%; width: 10%; height: 100px;">
+    <img src="aguarde2.gif" id="img_aguarde" style="display: none; margin-top: 0,80%; margin-left:33%; width: 10%; height: 100px;">
 
     <div id="div_erro" style="background-color: sandybrown; color: maroon; display: none;">
         Usuário e/ou senha inválidos!
@@ -64,21 +62,23 @@
 <script>
 
     verificarAutenticacao();
+    
 
     function verificarAutenticacao() {
         if (sessionStorage.usuario_bandtec != undefined) {
             window.location.href = 'grafico-chartjs.html';
         }
     }
-
     function entrar() {
+        validar2();
+        finalizar_aguardar();
         aguardar();
         var formulario = new URLSearchParams(new FormData(form_login));
         fetch("/usuarios/entrar", {
             method: "POST",
             body: formulario
         }).then(function (response) {
-            
+
             if (response.ok) {
 
                 response.json().then(function (resposta) {
@@ -99,14 +99,20 @@
 
     function aguardar() {
         btn_entrar.disabled = true;
-        img_aguarde.style.display='block';
-        div_erro.style.display='none';
+        img_aguarde.style.display = 'block';
+        div_erro.style.display = 'none';
     }
 
     function finalizar_aguardar() {
         btn_entrar.disabled = false;
-        img_aguarde.style.display='none';
-        div_erro.style.display='block';
+        img_aguarde.style.display = 'none';
+        div_erro.style.display = 'block';
+    }
+    function validar2() {
+        if ( lgm.value == 0 || sna.value == 0) {
+            alert("Preencha os Campos!")
+            
+        }
     }
 
 </script>
