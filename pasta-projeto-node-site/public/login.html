@@ -88,9 +88,13 @@
 
                 });
             } else {
-
+                if(login.value==0|| senha.value==0){
+                    alert("Os campos Usuário ou Senha não foram preenchidos")
+                }
+                else{
                 console.log('Erro de login!');
                 finalizar_aguardar();
+                }
             }
         });
 
